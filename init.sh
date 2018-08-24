@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# set variables
+ACCESS_IP=$1
+
 # install software
 apt-get update
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common
