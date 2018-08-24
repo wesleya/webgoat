@@ -13,7 +13,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y iptables-persistent
 docker pull webgoat/webgoat-8.0
 
 # secure box
-ptables -I INPUT 1 -s $ACCESS_IP -j ACCEPT
+iptables -I INPUT 1 -s $ACCESS_IP -j ACCEPT
 iptables -I INPUT 2 -j DROP
 iptables -I OUTPUT 1 -d $ACCESS_IP -j ACCEPT
 iptables -I OUTPUT 2 -j DROP
